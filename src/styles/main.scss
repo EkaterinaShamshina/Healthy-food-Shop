@@ -48,6 +48,7 @@ body {
     }
     &__cart {
         display: block;
+        z-index: 1;
         background-image: url(../images/cart.svg);
         background-size: 1.7rem 1.5rem;
         background-color: $orange;
