@@ -19,7 +19,7 @@ body {
 
 .header {
     max-width: 1440px;
-    margin: 0 auto;
+    margin: 0 auto 6rem;
     padding: 4rem 15px 0 15px;
     display: flex;
     justify-content: space-between;
@@ -61,6 +61,7 @@ body {
         &:hover {
             background-color: $green;
             border:1px solid $green;
+            cursor:pointer;
         }
     }
     &__counter {
@@ -68,7 +69,7 @@ body {
         font-size: 0.8rem;
         text-decoration: none;
         position: absolute;
-        right: 1rem;
+        right: 0.7rem;
         top: 0.6rem;
 
     }
@@ -91,6 +92,7 @@ body {
     background-image: url(../images/main.png);
     background-size: cover;
     background-position-x: center;
+    position: relative;
     &__item {
         margin-left: 12rem;
         max-width: 378px;
@@ -98,6 +100,134 @@ body {
     }
     &__link {
         margin-top: 6rem;
+    }
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        align-items: center;
+        padding-bottom: 200px;
+    }
+    &__cover {
+        flex-basis: 763px;
+        height: 763px;
+        border: 1px solid rgba($green, 0.4);
+        border-radius: 100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    &__line {
+        width: 657px;
+        height: 654px;
+        border-radius: 100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgba($green, 0.4);
+    }
+    &__image {
+        width: 98%;
+    }
+    &__btn {
+        border: none;
+        padding: 0;
+        position: absolute;
+        color: $green;
+        background-color: transparent;
+        text-align: left;
+        &:hover {
+                &::before {
+                    background-color: $orange;
+                    box-shadow: 0 0 0 4px $white, 0 0 0 5px $orange;
+                    cursor: pointer;
+                }
+            }
+        &::before {
+            content: '';
+            width: 11px;
+            height: 11px;
+            box-shadow: 0 0 0 4px $white, 0 0 0 5px $green;
+            border-radius: 100%;
+            background-color: $green;
+            position: absolute;
+        }
+        &_1 {
+            top: 35px;
+            left: 67px;
+            &::before {
+            bottom: -5px;
+            right: -37px;
+            }
+        }
+        &_2 {
+            top: 184px;
+            right: 1px;
+            &::before {
+            top: 15px;
+            left: -35px;
+            }
+        }
+        &_3 {
+            bottom: -44px;
+            right: 243px;
+            &::before {
+            top: -26px;
+            left: 15px;
+            }
+        }
+    }
+    &__food {
+        display: block;
+        color: rgba($green, 0.8);
+    }
+    &__vegetables {
+        position: absolute;
+        &_pepper {
+        top: 399px;
+        left: 30px;
+        width: 8.6rem;
+        height: auto;
+        } 
+        &_bean01 {
+        top: 798px;
+        left: 8px;
+        width: 4.7rem;
+        height: auto;
+        } 
+        &_bean02 {
+        top: 813px;
+        left: 0px;
+        width: 3.6rem;
+        height: auto;
+        }
+        &_bean03 {
+        top: 864px;
+        left: 29px;
+        width: 6.6rem;
+        height: auto;
+        } 
+        &_tomato {
+        bottom: 143px;
+        right: 109px;
+        width: 11rem;
+        height: auto;
+        } 
+        &_avocado {
+        top: 49px;
+        right: 0px;
+        width: 17.8rem;
+        height: auto;
+        }
+        &_cucumber {
+        top: 0px;
+        left: 682px;
+        width: 8.5rem;
+        height: auto;
+        } 
     }
 }
 .title {
@@ -123,10 +253,12 @@ body {
 .link {
     color:$white;
     text-transform: uppercase;
-    padding: 2.2rem 4.2rem;
+    padding: 2.3rem 5.4rem;
     background-color: $orange;
     box-shadow: 0px 1rem 1.1rem .2rem rgba(207, 92, 13, 0.2);
     text-decoration: none;
     border-radius: 3.8rem;
     display: inline-block;
 }
+
+  
