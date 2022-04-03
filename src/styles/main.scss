@@ -19,7 +19,7 @@ body {
 
 .header {
     max-width: 1440px;
-    margin: 0 auto 6rem;
+    margin: 0 auto 5rem;
     padding: 4rem 15px 0 15px;
     display: flex;
     justify-content: space-between;
@@ -48,12 +48,11 @@ body {
     }
     &__cart {
         display: block;
-        z-index: 1;
         background-image: url(../images/cart.svg);
         background-size: 1.7rem 1.5rem;
         background-color: $orange;
-        width: 3.8rem;
-        height: 3.8rem;
+        width: 4rem;
+        height: 4rem;
         border-radius: 100%;
         background-repeat: no-repeat;
         background-position: center center;
@@ -78,10 +77,10 @@ body {
 .logo {
     display:block;
     background-image: url(../images/logo.svg);
-    width: 12.3rem;
+    width: 12rem;
     height: 3.2rem;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 .container {
     max-width: 1440px;
@@ -93,14 +92,16 @@ body {
     background-image: url(../images/main.png);
     background-size: cover;
     background-position-x: center;
+    background-repeat: no-repeat;
     position: relative;
+    z-index: 0;
     &__item {
         margin-left: 12rem;
         max-width: 378px;
         margin-top: 6rem;
     }
     &__link {
-        margin-top: 6rem;
+        margin-top: 5.5rem;
     }
     &__flex {
         display: flex;
@@ -110,8 +111,8 @@ body {
         padding-bottom: 200px;
     }
     &__cover {
-        flex-basis: 763px;
-        height: 763px;
+        flex-basis: 758px;
+        height: 758px;
         border: 1px solid rgba($green, 0.4);
         border-radius: 100%;
         display:flex;
@@ -121,8 +122,8 @@ body {
         position: relative;
     }
     &__line {
-        width: 657px;
-        height: 654px;
+        width: 656px;
+        height: 656px;
         border-radius: 100%;
         display:flex;
         flex-direction: column;
@@ -131,9 +132,12 @@ body {
         border: 1px solid rgba($green, 0.4);
     }
     &__image {
-        width: 98%;
+        width: 90%;
         box-shadow: 5px 9px 34px 8px rgba($green, 0.2);
         border-radius: 100%;
+    }
+    &__text {
+        padding-top: 4rem;
     }
     &__btn {
         border: none;
@@ -142,6 +146,7 @@ body {
         color: $green;
         background-color: transparent;
         text-align: left;
+        line-height: 1.4;
         &:hover {
                 &::before {
                     background-color: $orange;
@@ -159,27 +164,27 @@ body {
             position: absolute;
         }
         &_1 {
-            top: 35px;
-            left: 67px;
+            top: 46px;
+            left: 63px;
             &::before {
-            bottom: -5px;
-            right: -37px;
+            bottom: 11px;
+            right: -35px;
             }
         }
         &_2 {
-            top: 184px;
+            top: 193px;
             right: 1px;
             &::before {
-            top: 15px;
-            left: -35px;
+            top: 17px;
+            left: -25px;
             }
         }
         &_3 {
-            bottom: -44px;
+            bottom: -51px;
             right: 243px;
             &::before {
-            top: -26px;
-            left: 15px;
+            top: -21px;
+            left: 13px;
             }
         }
     }
@@ -189,6 +194,7 @@ body {
     }
     &__vegetables {
         position: absolute;
+        z-index: -1;
         &_pepper {
         top: 399px;
         left: 30px;
@@ -214,7 +220,7 @@ body {
         height: auto;
         } 
         &_tomato {
-        bottom: 143px;
+        bottom: 127px;
         right: 109px;
         width: 11rem;
         height: auto;
@@ -238,6 +244,7 @@ body {
     font-weight: 700;
     font-size: 8rem;
     margin: 0;
+    line-height: 1.0;
     &__span {
         font-style: italic;
     }
@@ -249,19 +256,36 @@ body {
 }
 .description {
     margin: 0;
+    line-height: 1.5;
     &_size-s {
         font-size: 1.8rem;
+    }
+    &_size-m {
+        font-size: 2.4rem;
     }
 }
 .link {
     color:$white;
     text-transform: uppercase;
-    padding: 2.3rem 5.4rem;
+    padding: 2.3rem 4.4rem;
     background-color: $orange;
     box-shadow: 0px 1rem 1.1rem .2rem rgba(207, 92, 13, 0.2);
     text-decoration: none;
     border-radius: 3.8rem;
     display: inline-block;
+    letter-spacing: 0.13rem;
+}
+.offer {
+    background-image: url(../images/offer.png);
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    padding-top: 1rem;
+    padding-bottom: 200px;
+    &__text {
+        margin-top: 5.7rem;
+        max-width: 68.5rem;
+    }
 }
 
   
