@@ -132,6 +132,8 @@ body {
     }
     &__image {
         width: 98%;
+        box-shadow: 5px 9px 34px 8px rgba($green, 0.2);
+        border-radius: 100%;
     }
     &__btn {
         border: none;
