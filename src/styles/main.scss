@@ -286,6 +286,96 @@ body {
         margin-top: 5.7rem;
         max-width: 68.5rem;
     }
+    &__slider {
+        overflow: hidden;
+        padding-top: 100px;
+    }
+}
+.swiper {
+    overflow: initial;
+    &-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        border: 1px solid #f1eeee;
+        border-radius: 5%;
+        height: 515px;
+        &__description {
+            padding-left: 35px;
+        }
+        &__title {
+            margin:0;
+            font-family: $font-cormorant;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 2.7rem;
+        }
+        &__text {
+            margin: 0;
+            opacity: 0.7;
+            max-width: 27rem;
+            line-height: 1.48;
+            margin-bottom: 3.3rem;
+        }
+        & a {
+            display:flex;
+            align-items: center;
+            align-content: center;
+            gap: 2rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 0.15rem;
+            font-family: $font-jost;
+            font-size: 1.6rem;
+            color: $green;
+            opacity: 0.8;
+            font-weight: 500;
+            margin-bottom: 4rem;
+        }
+        & a::before {
+            content: "";
+            display:inline-block;
+            background-image: url(../images/plus.svg);
+            background-size: 1.5rem 1.5rem;
+            width: 2.8rem;
+            height: 2.8rem;
+            background-repeat: no-repeat;
+            background-position: center center;
+            border: 1px solid $green;
+            opacity: 0.8;
+            border-radius: 100%;
+        }
+        &_milk {
+            background-image: url(../images/milk.png);
+            background-size: cover;
+        }
+        &_pasta {
+            background-image: url(../images/pasta.png);
+            background-size: cover;
+        }
+        &_meat {
+            background-image: url(../images/steaks.png);
+            background-size: cover;
+        }
+    }
+    &-pagination {
+        display: none;
+    }
+    &-button-next, &-button-prev {
+        top: -62px;
+        &::after {
+            color: $green;
+            font-size: 2rem;
+        }
+    }
+    &-button-next {
+        left:initial;
+        right: -9px;
+    }
+    &-button-prev {
+        left:initial;
+        right: 72px;
+    }
 }
 
   
