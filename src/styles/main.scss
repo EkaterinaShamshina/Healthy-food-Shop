@@ -288,7 +288,7 @@ body {
     }
     &__slider {
         overflow: hidden;
-        padding-top: 100px;
+        padding-top: 10rem;
     }
 }
 .swiper {
@@ -297,22 +297,44 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: end;
-        border: 1px solid #f1eeee;
-        border-radius: 5%;
+        border: 1px solid rgba($color: $green, $alpha: 0.4);
+        border-radius: 2rem;
+        padding: 4rem 3.7rem;
+        box-sizing: border-box;
         height: 515px;
-        &__description {
-            padding-left: 35px;
+        position: relative;
+        z-index: 0;
+        &:hover {
+            box-shadow: 0 0 0 2px rgba($green, 0.4) inset;
+            .swiper-slide__hover {
+                height: 233px;
+                opacity: 1;
+            }
+            &::after {
+                content:'';
+                background-color: rgba(white, 0.55);
+                width:calc(100% - 4px);
+                height:calc(100% - 4px);
+                position: absolute;
+                top:2px;
+                left: 2px;
+                border-radius: 2rem;
+                z-index: -1;
+            }
         }
         &__title {
-            margin:0;
+            margin-bottom:0;
             font-family: $font-cormorant;
             font-size: 3rem;
             font-weight: 700;
-            margin-bottom: 2.7rem;
+        }
+        &__hover {
+            height:0;
+            opacity: 0;
         }
         &__text {
-            margin: 0;
             opacity: 0.7;
+            margin-top: 2.5rem;
             max-width: 27rem;
             line-height: 1.48;
             margin-bottom: 3.3rem;
@@ -330,11 +352,12 @@ body {
             color: $green;
             opacity: 0.8;
             font-weight: 500;
-            margin-bottom: 4rem;
-        }
-        & a::before {
+            &:hover {
+                opacity: 1;
+            }
+            &::before {
             content: "";
-            display:inline-block;
+            display:block;
             background-image: url(../images/plus.svg);
             background-size: 1.5rem 1.5rem;
             width: 2.8rem;
@@ -344,6 +367,7 @@ body {
             border: 1px solid $green;
             opacity: 0.8;
             border-radius: 100%;
+            }
         }
         &_milk {
             background-image: url(../images/milk.png);
@@ -363,8 +387,13 @@ body {
     }
     &-button-next, &-button-prev {
         top: -62px;
+        &:hover {
+            &::after {
+                color: rgba($green, 1);
+            }
+        }
         &::after {
-            color: $green;
+            color: rgba($green, 0.4);
             font-size: 2rem;
         }
     }
