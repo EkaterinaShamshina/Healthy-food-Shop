@@ -281,7 +281,7 @@ body {
     background-position-x: center;
     background-repeat: no-repeat;
     padding-top: 1rem;
-    padding-bottom: 200px;
+    padding-bottom: 12.8rem;
     &__text {
         margin-top: 5.7rem;
         max-width: 68.5rem;
@@ -406,5 +406,67 @@ body {
         right: 72px;
     }
 }
-
+.about {
+    background-image: url(../images/about.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 4rem;
+    padding-bottom:20rem;
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        gap: 24rem;
+        margin-left: 12rem;
+        margin-top: 6rem;
+    }
+    &__text {
+        display:flex;
+        align-items: end;
+    }
+    &__list {
+        list-style-type: none;
+        padding-left: 0;
+        margin:0;
+        display:flex;
+        justify-content: space-between;
+        gap: 9rem;
+        align-items: center;
+    }
+    &__item {
+        font-family: $font-cormorant;
+        font-style: italic;
+        font-size: 3rem;
+        font-weight: 700;
+        display: flex;
+        flex-direction:column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.8rem;
+        
+        &::before {
+            content: "";
+            display:block;
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: 8.5rem;
+            width: 8.5rem;
+            border: 1px solid rgba($green, 0.4);
+            border-radius: 100%;
+        }
+        &_fruits::before {
+            background-image: url(../images/fruits.svg);
+            background-size: 43px 41px;
+        }
+        &_traditional::before {
+            background-image: url(../images/traditional.svg);
+            background-size: 39px 39px;
+        }
+        &_goods::before {
+            background-image: url(../images/good.svg);
+            background-size: 45px 39px;
+        }
+    }
+}
+  
   
