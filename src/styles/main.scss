@@ -286,17 +286,17 @@ body {
         margin-top: 5.7rem;
         max-width: 68.5rem;
     }
-    &__slider {
-        overflow: hidden;
-        padding-top: 10rem;
-    }
+}
+.slider {
+    overflow: hidden;
+    padding-top: 10rem;
 }
 .swiper {
     overflow: initial;
     &-slide {
         display: flex;
         flex-direction: column;
-        justify-content: end;
+        justify-content: space-between;
         border: 1px solid rgba($color: $green, $alpha: 0.4);
         border-radius: 2rem;
         padding: 4rem 3.7rem;
@@ -304,23 +304,32 @@ body {
         height: 515px;
         position: relative;
         z-index: 0;
+        &_white {
+            justify-content: end;
+            &:hover {
+                .swiper-slide__hover {
+                    height: 233px;
+                    opacity: 1;
+                }
+                &::after {
+                    content:'';
+                    background-color: rgba(white, 0.55);
+                    width:calc(100% - 4px);
+                    height:calc(100% - 4px);
+                    position: absolute;
+                    top:2px;
+                    left: 2px;
+                    border-radius: 2rem;
+                    z-index: -1;
+                }
+            }
+        }
         &:hover {
             box-shadow: 0 0 0 2px rgba($green, 0.4) inset;
             .swiper-slide__hover {
                 height: 233px;
                 opacity: 1;
-            }
-            &::after {
-                content:'';
-                background-color: rgba(white, 0.55);
-                width:calc(100% - 4px);
-                height:calc(100% - 4px);
-                position: absolute;
-                top:2px;
-                left: 2px;
-                border-radius: 2rem;
-                z-index: -1;
-            }
+            }  
         }
         &__title {
             margin-bottom:0;
@@ -339,7 +348,7 @@ body {
             line-height: 1.48;
             margin-bottom: 3.3rem;
         }
-        & a {
+        &__link {
             display:flex;
             align-items: center;
             align-content: center;
@@ -381,6 +390,21 @@ body {
             background-image: url(../images/steaks.png);
             background-size: cover;
         }
+        &__cover {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 293px;
+            text-align: center;
+        }
+        &__image {
+            height: 100%;
+        }
+        &__footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
     &-pagination {
         display: none;
@@ -406,6 +430,38 @@ body {
         right: 72px;
     }
 }
+.counter {
+    display: flex;
+    &__btn {
+        cursor: pointer;
+        width:50px;
+        height: 50px;
+        border: 1px solid $green;
+        border-radius: 100%;
+        background-color: transparent;
+        padding: 0;
+        background-position: center center;
+    }
+    &__minus {
+        pointer-events: none;
+        background-image: url(../images/minus.svg);
+        background-size: 20px 11px;
+        background-repeat: no-repeat;
+        opacity: 0.4;
+    }
+    &__plus {
+        background-image: url(../images/plus.svg);
+        background-size: 14px 14px;
+        background-repeat: no-repeat;
+    }
+    &__input {
+        text-align: center;
+        font-size: 2.4rem;
+        width: 46px;
+        border: none;
+        padding: 0;
+    }
+}
 .about {
     background-image: url(../images/about.png);
     background-position: center;
@@ -416,6 +472,7 @@ body {
     &__box {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         gap: 24rem;
         margin-left: 12rem;
         margin-top: 6rem;
@@ -443,7 +500,6 @@ body {
         justify-content: space-between;
         align-items: center;
         gap: 1.8rem;
-        
         &::before {
             content: "";
             display:block;
