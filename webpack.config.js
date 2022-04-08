@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+
 const devServer = (isDev) => !isDev ? {} : {
     devServer: {
         open:true,
@@ -52,3 +53,4 @@ module.exports = ({develop}) => ({
   },
 ...devServer(develop),
 });
+

@@ -289,7 +289,7 @@ body {
 }
 .slider {
     overflow: hidden;
-    padding-top: 10rem;
+    padding-top: 9.5rem;
 }
 .swiper {
     overflow: initial;
@@ -394,16 +394,41 @@ body {
             position: relative;
             overflow: hidden;
             width: 100%;
-            height: 293px;
-            text-align: center;
+            height: 326px;
         }
         &__image {
-            height: 100%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: contain;
+            width: 100%;
+            height: 315px;
         }
         &__footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
+        }
+        &__trend {
+            height: 680px;
+            padding-top: 2rem;
+        }
+        &__description {
+            font-size: 1.8rem;
+            color: rgba($green, 0.7);
+            max-width: 26rem;
+            margin-top: 2.5rem;
+            margin-bottom:0;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            line-height: 1.4;
+        }
+        &__price {
+            font-size: 2.4rem;
+            margin-bottom:3rem;
+            margin-top: 0;
         }
     }
     &-pagination {
@@ -434,7 +459,7 @@ body {
     display: flex;
     &__btn {
         cursor: pointer;
-        width:50px;
+        width: 50px;
         height: 50px;
         border: 1px solid $green;
         border-radius: 100%;
@@ -461,6 +486,9 @@ body {
         border: none;
         padding: 0;
     }
+    &__link {
+        padding: 2.3rem 5.1rem;
+    }
 }
 .about {
     background-image: url(../images/about.png);
@@ -468,11 +496,10 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 4rem;
-    padding-bottom:20rem;
+    padding-bottom:14rem;
     &__box {
         display: flex;
         justify-content: space-between;
-        align-items: center;
         gap: 24rem;
         margin-left: 12rem;
         margin-top: 6rem;
@@ -524,5 +551,125 @@ body {
         }
     }
 }
-  
+.trends {
+    background-image: url(../images/trends.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 6rem;
+    padding-bottom:20rem;
+    &__text {
+        margin-top: 3.5rem;
+    }
+}
+.catalog {
+    &__text {
+        margin-bottom: 8.5rem;
+        margin-top: 3.5rem;
+    }
+    &__filter {
+        & ul {
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+        }
+        & a {
+            cursor: pointer;
+        }
+        &_items li {
+            display: inline-block;
+            width: 23rem;
+            padding-top: 24px;
+            padding-bottom: 24px;
+            text-align: center;
+            margin-right: 16px;
+            border-radius: 40px;
+            font-size: 1.8rem;
+            color: rgba($green, 0.5);
+            border: 1px solid rgba($green, 0.5);
+            box-sizing: border-box;
+            &:hover {
+                color: $orange;
+                border: 1px solid $orange;
+            }
+            &.active{
+                color: $orange;
+                border: 1px solid $orange;
+            }
+        }
+    }
+}
+.catalog__grid {
+    display: grid;
+    gap: 2.1rem;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 5rem;
+    &__item {
+        border:1px solid rgba($green, 0.4);
+        border-radius: 2rem;
+        padding: 2rem 1.7rem 3rem 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &:hover {
+            box-shadow: 0 0 0 2px rgba($green, 0.4) inset;
+        }
+        &__cover {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 230px;
+        }
+        &__image {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: contain;
+            width: 100%;
+            height: 204px;
+        }
+        &__title {
+            margin-bottom:0;
+            margin-top: 0;
+            font-family: $font-cormorant;
+            font-size: 3rem;
+            font-weight: 700;
+        }
+        &__description {
+            font-size: 1.6rem;
+            color: rgba($green, 0.7);
+            max-width: 24rem;
+            margin-top: 1.5rem;
+            margin-bottom:0;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            line-height: 1.4;
+        }
+        &__price {
+            font-size: 2.4rem;
+            margin-bottom:2.9rem;
+        }
+        &__footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .link {
+                font-size: 1.4rem;
+                padding: 2.0rem 3.4rem;
+            }
+            .counter {
+              &__btn {
+                width: 40px;
+                height: 40px;
+              }
+              &__input {
+                  width: 35px;
+              }
+            }
+        }
+    }
+}
+    
   
