@@ -274,6 +274,7 @@ body {
     border-radius: 3.8rem;
     display: inline-block;
     letter-spacing: 0.13rem;
+    border: none;
     &_min {
         font-size: 1.4rem;
         padding: 2.0rem 3.4rem;
@@ -704,5 +705,207 @@ body {
             justify-content: space-between;
             align-items: center;
         }
+    }
+}
+.text_orange {
+    color: $orange;
+}
+.delivery {
+    padding-top: 6rem;
+    background-image: url(../images/delivery.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 8rem;
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1205px;
+        margin: 75px auto 0;
+        gap: 11.8rem;
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        & a {
+            color: $green;
+        }
+    }
+}
+.payment {
+    &__link {
+        list-style-type: none;
+        padding-left: 0;
+        margin-top: 46px;
+        margin-bottom: 0;
+        display: flex;
+        gap: 35px;
+    }
+}
+.mastercard {
+    background-image: url(../images/mastercard.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 53px;
+    height: 32px;
+    cursor: pointer;
+    opacity: 0.4;
+    &:hover {
+        opacity: 1;
+    }
+}
+.visa {
+    background-image: url(../images/visa.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 74px;
+    height: 23px;
+    cursor: pointer;
+    opacity: 0.4;
+    &:hover {
+        opacity: 1;
+    }
+}
+.paypal {
+    background-image: url(../images/paypal.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 87px;
+    height: 24px;
+    cursor: pointer;
+    opacity: 0.4;
+    &:hover {
+        opacity: 1;
+    }
+}
+.contact {
+    padding-top: 12.5rem;
+    padding-bottom: 10rem;
+    background-image: url(../images/contact.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &-box {
+        display: flex;
+        justify-content: space-between;
+        &__item {
+            display: flex;
+            flex-direction: column;
+            margin-top: 2.6rem;
+            margin-bottom: 3rem;
+            gap: 6rem;
+        }
+        &__text {
+            max-width: 40rem;
+            flex-grow: 1;
+            margin-left: 12.0rem;
+            line-height: 1.7;
+            margin-top: 0;
+            margin-bottom: 0;
+            display: flex;
+            flex-direction:column;
+            justify-content: space-between;
+        }
+        &__contacts {
+            list-style-type: none;
+            padding-left: 0;
+            line-height: 1.9;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        &__form {
+            flex-basis: 600px;
+        }
+        &__description {
+            letter-spacing:0.1rem;
+            margin: 0;
+        }
+        &__contact {
+            text-decoration: none;
+            font-size: 2.4rem;
+            color: $green;
+            font-weight: 500;
+            align-self: center;
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+            &__tel {
+                &::before {
+                    content: "";
+                    display:inline-block;
+                    background-image: url(../images/phone.svg);
+                    background-size: cover;
+                    width: 2.9rem;
+                    height: 2.9rem;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                }
+            }
+            &__mail {
+                &::before {
+                    content: "";
+                    display:inline-block;
+                    background-image: url(../images/mail.svg);
+                    background-size: cover;
+                    width: 2.9rem;
+                    height: 2.9rem;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                }
+            }
+        }
+    }
+}
+.card {
+    border: 2px solid rgba($green, 0.4);
+    border-radius: 2rem;
+    padding: 3.2rem 5.8rem 3.9rem;
+    &__title {
+        font-size:3rem;
+        font-family: $font-cormorant;
+        margin-top: 0;
+    }
+    &__label {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        display: block;
+        margin-left: 0.6rem;
+    }
+    &__input {
+        border: 1px solid rgba($green, 0.4);
+        padding: 2.2rem 2.9rem;
+        margin-bottom: 2.8rem;
+        display: block;
+        width: 100%;
+        box-sizing:border-box;
+        border-radius: 2rem;
+        &:focus {
+            border: 1px solid rgba($green, 1);
+            outline: none;
+        }
+        &:invalid {
+            border: red;
+        }
+    }
+    &__check {
+        font-size: 1.2rem;
+        color: rgba($green, 0.6);
+        max-width: 360px;
+        margin-top: 20px;
+        margin-bottom: 0;
+        line-height: 1.4;
+    }
+    &__link {
+        margin-top: 1.3rem;
+        cursor: pointer;
+    }
+    &__docs {
+        color: rgba($green, 0.6);
+        text-decoration: none;
+        border-bottom: 1px solid #ecedec;
     }
 }
