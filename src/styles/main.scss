@@ -779,13 +779,15 @@ body {
         }
     }
 }
-.contact {
-    padding-top: 12.5rem;
-    padding-bottom: 10rem;
+.footer {
     background-image: url(../images/contact.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.contact {
+    padding-top: 12.5rem;
+    padding-bottom: 10rem;
     &-box {
         display: flex;
         justify-content: space-between;
