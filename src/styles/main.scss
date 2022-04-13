@@ -81,6 +81,10 @@ body {
     height: 3.2rem;
     background-repeat: no-repeat;
     background-size: contain;
+    &__big {
+        width: 17.9rem;
+        height: 4.8rem;
+    }
 }
 .container {
     max-width: 1440px;
@@ -784,10 +788,92 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    font-size: 1.8rem;
+    &__box {
+        display: flex;
+        justify-content: space-between; 
+    }
+    &__logo {
+        flex-basis: 21.5%;
+        margin-top: 1rem;
+    }
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap:2.5rem;
+    }
+    &__link {
+        text-decoration: none;
+        color: $green;
+    }
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+    &__tel {
+        font-size: 2.7rem;
+        text-decoration: none;
+        color: $green;
+        }
+    &__mail {
+        text-decoration: none;
+        color: $green;
+        }
+    &__text {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3.4rem;
+        padding-bottom: 3.4rem;
+        opacity: 0.6;
+        font-size: 1.6rem;
+        }
+    &-social {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__link {
+            content: '';
+            display: block;
+            background-position: center center;
+            background-repeat: no-repeat;
+            border: 2px solid rgba(39, 48, 15);
+            height: 4.5rem;
+            width: 4.5rem;
+            border-radius: 100%;
+            opacity: 0.8;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        &__vk {
+            background-image: url(../images/vk.svg);
+            background-size:2.3rem 2.4rem;
+        }
+        &__inst {
+           
+            background-image: url(../images/instagram.svg);
+            background-size:1.8rem 1.8rem;
+        }
+        &__fb {
+            background-image: url(../images/facebook.svg);
+            background-size:1.9rem 1.8rem;
+        }
+    }
+}
+.author-link {
+    text-decoration: none;
+    color: $green;
 }
 .contact {
     padding-top: 12.5rem;
-    padding-bottom: 10rem;
+    padding-bottom: 16rem;
     &-box {
         display: flex;
         justify-content: space-between;
@@ -908,3 +994,9 @@ body {
         border-bottom: 1px solid #ecedec;
     }
 }
+footer {
+    border-top: 1px solid rgba($green, 0.4);
+    padding-top: 7.5rem;
+}
+
+  
