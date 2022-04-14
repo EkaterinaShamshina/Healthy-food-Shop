@@ -53,4 +53,3 @@ module.exports = ({develop}) => ({
   },
 ...devServer(develop),
 });
-
