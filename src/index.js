@@ -77,4 +77,17 @@ var swiper = new Swiper(".offerSwiper", {
     loopFillGroupWithBlank: true,
     freeMode: true,
     initialSlide: 0, 
+    breakpoints: {
+      320: {
+        slidesPerView: 2.5,
+      },
+      768: {
+        slidesPerView: 3.5,
+        slidesPerGroup: 2,
+      },
+      900: {
+        slidesPerView: 5,
+        slidesPerGroup: 5,
+      }
+    }
   });
