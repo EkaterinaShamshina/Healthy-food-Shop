@@ -48,6 +48,7 @@ body {
     gap: 5%;
     @media (max-width: $r_desk_1280) {
         gap:3%; 
+        margin-bottom: 4.5rem;
     }
     &__navigation {
         flex-grow: 1;
@@ -230,6 +231,9 @@ body {
     @media (max-width: $r_tab) {
         max-width: 600px;
     } 
+    @media (max-width: $r_mob_400) {
+        max-width: 330px;
+    } 
 }
 .main {
     position: relative;
@@ -247,6 +251,10 @@ body {
             margin-left: 0;
             margin-top: 3rem;
         }
+        @media (max-width: $r_tab) {
+            max-width: 85%;
+            margin: 2.4rem auto;
+        }
     }
     &__link {
         margin-top: 5.5rem;
@@ -254,7 +262,7 @@ body {
             text-align: center;
         }
         @media (max-width: $r_mob_500) {
-            margin-top: 3.8rem;
+            margin-top: 4.1rem;
         }
     }
     &__flex {
@@ -445,6 +453,11 @@ body {
             left: -4px;
             width: 6.6rem;
         }
+        @media (max-width: $r_mob_400) {
+            top: 249px;
+            left: -4px;
+            width: 4rem;
+        }
         } 
         &_bean01 {
         top: 798px;
@@ -523,7 +536,7 @@ body {
         @media (max-width: $r_mob_500) {
             top: initial;
             right: -15px;
-            bottom: 55px;
+            bottom: 94px;
             transform: rotate(90deg);
             width: 7.3rem;
         }
@@ -544,6 +557,9 @@ body {
     }
     @media (max-width: $r_tab) {
         text-align: center;
+    }
+    @media (max-width: $r_mob_400) {
+        font-size: 3.75rem;
     }
     &__span {
         font-style: italic;
@@ -566,11 +582,19 @@ body {
         @media (max-width: $r_desk_1280) {
             font-size: 1.6rem;
         }
+        @media (max-width: $r_mob_400) {
+            font-size: 1.5rem;
+        }
     }
     &_size-m {
         font-size: 2.4rem;
         @media (max-width: $r_desk_1280) {
             font-size: 2.2rem;
+        }
+        @media (max-width: $r_mob_400) {
+            font-size: 1.5rem;
+            max-width: 213px;
+            margin: 0 auto;
         }
     }
 }
@@ -598,24 +622,33 @@ body {
     &:hover {
     background-color: $dark-orange;
     }
+    &_main {
+        width: auto;
+    }
     &_min {
         font-size: 1.4rem;
         padding: 2.0rem 3.4rem;
         box-shadow: 0px 1rem 1.1rem .17rem rgba(207, 92, 13, 0.15);
         @media (max-width: $r_desk_1400) {
             padding: 1.7rem 2.4rem;
+            letter-spacing: 0;
         }
     }
 }
 .offer {
     margin-top: 1rem;
-    margin-bottom: 11rem;
     @media (max-width: $r_tab) {
-        margin-top: 6rem;;
+        margin-top: 6rem;
+    }
+    @media (max-width: $r_mob_500) {
+        margin-top: 5rem;
     }
     &__text {
         margin-top: 5.7rem;
         max-width: 68.5rem;
+        @media (max-width: $r_mob_400) {
+            margin-top: 3.7rem;
+        }  
     }
 }
 .slider {
@@ -624,12 +657,15 @@ body {
     @media (max-width: $r_tab) {
         max-width: 450px;
         margin:0 auto; 
-        padding-top: 5.4rem;
+        padding-top: 5rem;
         padding-bottom: 6rem;
     }
     @media (max-width: $r_mob_500) {
         max-width: 210px;
         padding-bottom: 7rem;
+    }
+    @media (max-width: $r_mob_500) {
+        padding-bottom: 4rem;
     }
 }
 .swiper {
@@ -650,6 +686,9 @@ body {
         }
         @media (max-width: $r_mob_500) {
             padding: 2rem 2.2rem;
+        }
+        @media (max-width: $r_mob_500) {
+            padding: 2rem 5.2rem;
         }
         &_white {
             justify-content: end;
@@ -683,16 +722,16 @@ body {
                     z-index: -1;
                 }
             }
-        }
-        &:hover {
-            box-shadow: 0 0 0 2px rgba($green, 0.4) inset;
-            .swiper-slide__hover {
-                height: 233px;
-                opacity: 1;
-                @media (max-width: $r_tab) {
-                    height: auto;
-                }
-            }  
+            &:hover {
+                box-shadow: 0 0 0 2px rgba($green, 0.4) inset;
+                .swiper-slide__hover {
+                    height: 233px;
+                    opacity: 1;
+                    @media (max-width: $r_tab) {
+                        height: 25px;
+                    }
+                }  
+            }
         }
         &__title {
             margin-bottom:0;
@@ -715,7 +754,7 @@ body {
             opacity: 0;
             transition: 0.7s;
             @media (max-width: $r_tab) {
-                height: auto;
+                height: 25px;
                 opacity: 0.7;
             }
         }
@@ -951,6 +990,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: $r_mob_500) {
+        bottom: -40px;
+    }
+    @media (max-width: $r_mob_400) {
+        bottom: -30px;
+    }
 }
 .swiper-pagination-bullet {
     background-color: rgba($green, 0.4);
@@ -1014,6 +1059,13 @@ body {
         margin-top: 12rem;
         margin-bottom: 8rem;
     }
+    @media (max-width: $r_mob_500) {
+        margin-top: 9rem;
+    }
+    @media (max-width: $r_mob_400) {
+        margin-top: 4.6rem;
+        margin-bottom: 7rem;
+    }
     &__box {
         display: flex;
         justify-content: space-between;
@@ -1032,6 +1084,10 @@ body {
             flex-direction: column;
             margin-left: 0;
             gap: 4rem;
+        }
+        @media (max-width: $r_mob_400) {
+            margin-top: 3.5rem;
+            gap: 5.3rem;
         }
     }
     &__text {
@@ -1056,6 +1112,9 @@ body {
         @media (max-width: $r_mob_500) {
             gap: 4rem;
         }
+        @media (max-width: $r_mob_400) {
+            gap: 5rem;
+        }
     }
     &__item {
         font-family: $font-cormorant;
@@ -1069,6 +1128,10 @@ body {
         gap: 1.8rem;
         @media (max-width: $r_desk_1280) {
             font-size: 2.5rem;
+        }
+        @media (max-width: $r_mob_400) {
+            font-size: 1.75rem;
+            gap: 1.2rem;
         }
         &::before {
             content: "";
@@ -1113,21 +1176,39 @@ body {
     @media (max-width: $r_desk_1280) {
         margin-bottom: 12rem;
     }
+    @media (max-width: $r_mob_500) {
+        margin-top: 0;
+        margin-bottom: 7.5rem;
+    }
     &__text {
         margin-top: 3.5rem;
+        @media (max-width: $r_mob_500) {
+            margin-top: 2.4rem;
+        }
     }
 }
 .catalog {
     padding-top: 0rem;
     padding-bottom: 8rem;
+    @media (max-width: $r_mob_500 ) {
+        padding-bottom: 0;
+        margin-bottom: 7rem;
+    }
     &__text {
         margin-bottom: 8.5rem;
         margin-top: 3.5rem;
         @media (max-width: $r_desk_1120 ) {
             margin-bottom: 3.5rem;
         }
+        @media (max-width: $r_mob_500 ) {
+            margin-top: 2.5rem;
+            margin-bottom: 5.3rem;
+        }
     }
     &__filter {
+        @media (max-width: $r_mob_500) {
+            display: none;
+        }
         & ul {
             list-style: none;
             padding: 0px;
@@ -1187,6 +1268,9 @@ body {
             opacity: 1;
             gap: 1.6rem;
         }
+        @media (max-width: $r_mob_500) {
+            margin-top: 50px;
+        }
         &:hover {
             opacity: 1;
         }
@@ -1216,6 +1300,9 @@ body {
     @media (max-width: $r_tab_900) {
         grid-template-columns: repeat(2, 1fr);
     }
+    @media (max-width: $r_mob_500) {
+        margin-top: 3.2rem;
+    }
     &__item {
         border:1px solid rgba($green, 0.4);
         border-radius: 2rem;
@@ -1226,6 +1313,14 @@ body {
         transition: 0.3s;
         @media (max-width: $r_tab) {
             padding: 1rem 1.7rem 2rem;
+        }
+        @media (max-width: $r_mob_400) {
+            padding: 1rem 0.7rem 2rem;
+        }
+        &:nth-child(n+5) {
+            @media (max-width: $r_mob_500) {
+                display: none;
+            } 
         }
         &:hover {
             box-shadow: 0 0 0 2px rgba($green, 0.4) inset;
@@ -1276,6 +1371,9 @@ body {
             @media (max-width: $r_mob_500) {
                 min-height: auto;
             }
+            @media (max-width: $r_mob_500) {
+                font-size: 1.75rem;
+            }
         }
         &__description {
             font-size: 1.6rem;
@@ -1308,6 +1406,10 @@ body {
             @media (max-width: $r_mob_500) {
                 font-size: 1.5rem;
                 margin-bottom: 1.9rem;
+            }
+            @media (max-width: $r_mob_400) {
+                margin-bottom: 1.5rem;
+                margin-top: 1rem;
             }
         }
         &__footer {
@@ -1343,6 +1445,11 @@ body {
         @media (max-width: $r_tab) {
             flex-direction: column;
         }
+        @media (max-width: $r_mob_500) {
+            margin: 34px 0 0;
+            max-width: 295px;
+            gap: 4.3rem;
+        }
     }
     &__text {
         display: flex;
@@ -1350,6 +1457,9 @@ body {
         justify-content: space-between;
         @media (max-width: $r_tab) {
             gap: 3rem;
+        }
+        @media (max-width: $r_mob_500) {
+            gap: 2.5rem;
         }
     }
     &__link {
@@ -1378,11 +1488,12 @@ body {
         display: flex;
         gap: 35px;
         @media (max-width: $r_tab) {
-            margin: 2rem auto;
+            margin: 2rem auto 0;
             max-width: 35rem;
         }
-        &:hover {
-            opacity: 1;
+        @media (max-width: $r_mob_500) {
+            max-width: 25rem;
+            gap: 25px;
         }
         &__item {
             background-size: cover;
@@ -1393,7 +1504,10 @@ body {
             transition: 0.3s;
             transform: scale(1);
             opacity: 0.4;
-            transform: scale(1.05);
+            &:hover {
+                opacity: 1;
+                transform: scale(1.05);
+            }
         &_mastercard {
             background-image: url(../images/mastercard.svg);
             width: 53px;
@@ -1560,6 +1674,9 @@ body {
     @media (max-width: $r_tab) {
         margin-bottom: 8rem;
     }
+    @media (max-width: $r_mob_500) {
+        margin-top: 3.5rem;
+    }
     &-box {
         display: flex;
         justify-content: space-between;
@@ -1572,6 +1689,9 @@ body {
             margin-top: 2.6rem;
             margin-bottom: 3rem;
             gap: 6rem;
+            @media (max-width: $r_mob_400) {
+                gap: 3.4rem;
+            }
         }
         &__text {
             max-width: 40rem;
@@ -1746,6 +1866,31 @@ footer {
         padding-top: 3.5rem;
     }
 }
+.catalog-slider {
+    &__swiper {
+        display: none;
+    @media (max-width: $r_mob_500) {
+        display: block;
+    }
+    }
+    &__text {
+        list-style-type: none;
+        text-align: center;
+        border-radius: 40px;
+        color: rgba(39, 48, 15, 0.5);
+        box-shadow: none;
+        cursor: pointer;
+        padding: 1.3rem;
+        @media (max-width: $r_mob_400) {
+            font-size: 1.25rem;
+        }
+        &:hover {
+            color: $orange;
+            border: 1px solid $orange;
+        }
+    }
+}
+
 
 @keyframes shadow {
     0% {
