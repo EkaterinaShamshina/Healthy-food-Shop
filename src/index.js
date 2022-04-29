@@ -72,10 +72,6 @@ var swiper = new Swiper(".offerSwiper", {
   var swiper = new Swiper(".catalogSwiper", {
     slidesPerView: 2.5,
     spaceBetween: 10,
-    watchSlidesProgress: true,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    freeMode: true,
     initialSlide: 0, 
     breakpoints: {
       320: {
