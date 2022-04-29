@@ -36,7 +36,6 @@ body {
     background-image: url(../images/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    overflow-x: hidden;
 }
 
 .header {
@@ -239,7 +238,7 @@ body {
 .main {
     position: relative;
     z-index: 0;
-    //overflow-x: hidden;//
+    overflow-x: hidden;
     &__item {
         margin-left: 12rem;
         max-width: 378px;
@@ -1331,6 +1330,11 @@ body {
                 display: none;
             } 
         }
+        &:nth-child(n+7) {
+            @media (max-width: $r_desk_1350) {
+                display: none;
+            } 
+        }
         &:hover {
             box-shadow: 0 0 0 2px rgba($green, 0.4) inset;
         }
@@ -1937,6 +1941,7 @@ footer {
 .catalog-slider {
     &__swiper {
         display: none;
+        overflow-x: hidden;
     @media (max-width: $r_desk) {
         display: block;
     }
