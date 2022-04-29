@@ -659,6 +659,9 @@ body {
 .slider {
     overflow: hidden;
     padding-top: 9.5rem;
+    @media (max-width: $r_desk_1280) {
+        padding-bottom: 2rem;
+    }
     @media (max-width: $r_tab) {
         max-width: 450px;
         margin:0 auto; 
@@ -667,9 +670,6 @@ body {
     }
     @media (max-width: $r_mob_500) {
         max-width: 210px;
-        padding-bottom: 7rem;
-    }
-    @media (max-width: $r_mob_500) {
         padding-bottom: 5rem;
     }
     @media (max-width: $r_mob_360) {
@@ -1941,6 +1941,8 @@ footer {
 .catalog-slider {
     &__swiper {
         display: none;
+        box-sizing: border-box;
+        width: 100%;
         overflow-x: hidden;
     @media (max-width: $r_desk) {
         display: block;
